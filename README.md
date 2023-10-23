@@ -1,25 +1,26 @@
-# Login-mit-Email-Authentification
-LoginSystem mit PHP, SQL, Bootstrap. 
-Benutzer erhält nach Neuanmeldung eine Email, welche er bestätigen muss um die Anmeldung abzuschließen. Danach kann er sich normal einloggen.
+French version
+# Login-avec-authentification-email
+Système de connexion avec PHP, SQL, Bootstrap. 
+Après une nouvelle inscription, l'utilisateur reçoit un e-mail qu'il doit confirmer pour terminer l'inscription. Il peut ensuite se connecter normalement.
 
-Nutzer registriert sich und erhält eine Mail mit Bestätigungs-link
+L'utilisateur s'inscrit et reçoit un e-mail avec un lien de confirmation.
 
-Erst nach der Bestätigung kann der neue Nutzer sich einloggen
-
-
-Der Nutzer kann sein Passwort ändern, wenn er sein Passwort vergessen hat (Nach missglückten Anmeldeversuchen).
-
-Er erhält über Mail einen Link um sein Passwort zu ändern
+Le nouvel utilisateur ne peut se connecter qu'après confirmation.
 
 
-- PHP Mailer und Gmail SMTP (PHPMailer library: https://sourceforge.net/projects/phpmailer/ )
-- Bootstrap Grid und Forms 
-- Eingabevalidierung (bei Neuanmeldung) mit jQuery 
-- SQL-Datenank: login.sql
-- Hintergrundbilder aus : https://github.com/BlackrockDigital/startbootstrap by davidtmiller
+L'utilisateur peut modifier son mot de passe s'il l'a oublié (après une tentative d'inscription ratée).
+
+Il reçoit un lien par e-mail pour modifier son mot de passe.
 
 
-<p align="center">
+- PHP Mailer et Gmail SMTP (librairie PHPMailer : https://sourceforge.net/projects/phpmailer/ )
+- Grille Bootstrap et formulaires 
+- Validation de la saisie (lors d'une nouvelle inscription) avec jQuery 
+- Banque de données SQL : login.sql
+- Images d'arrière-plan de : https://github.com/BlackrockDigital/startbootstrap by davidtmiller
+
+
+<p align="centre">
   <img src="https://s19.postimg.org/vc7ghhter/index.png" width="280"/>
   <img src="https://s19.postimg.org/5bgadmsrn/neu_Anmelden.png" width="280"/>
   <img src="https://s19.postimg.org/eutni37s3/home.png" width="280"/>
@@ -30,18 +31,18 @@ Er erhält über Mail einen Link um sein Passwort zu ändern
   <img src="https://s19.postimg.org/id5neh8o3/resetpass2.png" width="280"/>
 </p>
 
-Update 20.01.17 Eingabevalidierung mit Javascript (alternativ auch mich Parsley.js möglich)
-<p align="left">
+Mise à jour 20.01.17 Validation de la saisie avec Javascript (alternativement possible avec Parsley.js)
+<p align="gauche">
   <img src="https://s19.postimg.org/8ux66bp5v/signup_valid.png" width="280"/>
 </p>
 
-Es fehlt noch Passwort Hashing (momentan mit Md5)
+Il manque encore le hashing du mot de passe (actuellement avec Md5).
 
-Update 23.02.17 Bugs:
--Veraltete Version von PHP Mailer: Fehlermeldung bei Neuanmeldung des Nutzers "preg_replace(): The /e modifier is no longer supported"
--Fehlende Betreffzeile in Bestätigungsmail
+Mise à jour 23.02.17 Bugs :
+-Version obsolète de PHP Mailer : Message d'erreur lors de la nouvelle connexion de l'utilisateur "preg_replace() : The /e modifier is no longer supported".
+-ligne d'objet manquante dans le mail de confirmation
 
 
-<h2> How to install </h2>
-- download, entpacken, Datenbank: login.sql
-- in User Class PHP Mailer Einstellungen: Email und Passwort eintragen
+<h2> Comment installer </h2>
+- télécharger, décompresser, base de données : login.sql
+- dans User Class PHP Mailer paramètres : Saisir l'email et le mot de passe
